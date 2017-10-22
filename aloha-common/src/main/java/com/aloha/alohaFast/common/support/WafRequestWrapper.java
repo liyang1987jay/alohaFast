@@ -1,4 +1,4 @@
-package com.aloha.alohaFast.base.support;
+package com.aloha.alohaFast.common.support;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

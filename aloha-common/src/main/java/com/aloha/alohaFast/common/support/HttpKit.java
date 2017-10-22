@@ -1,4 +1,4 @@
-package com.aloha.alohaFast.base.support;
+package com.aloha.alohaFast.common.support;
 
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;

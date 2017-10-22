@@ -1,9 +1,9 @@
-package com.aloha.alohaFast.base.controller;
+package com.aloha.alohaFast.common.controller;
 
-import com.aloha.alohaFast.base.page.PageInfoBT;
-import com.aloha.alohaFast.base.support.HttpKit;
-import com.aloha.alohaFast.base.tips.SuccessTip;
-import com.aloha.alohaFast.base.warpper.BaseControllerWarpper;
+import com.aloha.alohaFast.common.page.PageInfoBT;
+import com.aloha.alohaFast.common.support.HttpKit;
+import com.aloha.alohaFast.common.tips.SuccessTip;
+import com.aloha.alohaFast.common.warpper.BaseControllerWarpper;
 import com.baomidou.mybatisplus.plugins.Page;
 
 import javax.servlet.http.Cookie;

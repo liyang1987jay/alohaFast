@@ -1,4 +1,4 @@
-package com.aloha.alohaFast.base.tips;
+package com.aloha.alohaFast.common.tips;
 
 /**
  * 返回给前台的提示（最终转化为json形式）

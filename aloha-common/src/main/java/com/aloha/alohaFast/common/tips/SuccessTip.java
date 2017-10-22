@@ -1,4 +1,4 @@
-package com.aloha.alohaFast.base.tips;
+package com.aloha.alohaFast.common.tips;
 
 /**
  * 返回给前台的成功提示

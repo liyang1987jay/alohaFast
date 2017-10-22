@@ -1,4 +1,4 @@
-package com.aloha.alohaFast.base.util;
+package com.aloha.alohaFast.common.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

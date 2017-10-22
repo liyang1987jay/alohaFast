@@ -1,4 +1,4 @@
-package com.aloha.alohaFast.base.warpper;
+package com.aloha.alohaFast.common.warpper;
 
 import java.util.List;
 import java.util.Map;

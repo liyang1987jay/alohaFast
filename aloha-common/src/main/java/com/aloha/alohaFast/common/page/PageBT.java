@@ -1,4 +1,4 @@
-package com.aloha.alohaFast.base.page;
+package com.aloha.alohaFast.common.page;
 
 /**
  * @author liyang
