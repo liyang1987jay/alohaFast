@@ -1,6 +1,6 @@
-package com.aloha.alohaFast.base.db;
+package com.aloha.alohaFast.core.db;
 
-import com.aloha.alohaFast.base.util.SpringContextHolder;
+import com.aloha.alohaFast.common.util.SpringContextHolder;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 import java.util.HashMap;
@@ -43,20 +43,45 @@ public class Db<T> {
         this.clazz = clazz;
         this.baseMapper = (BaseMapper<?>) SpringContextHolder.getBean(clazz);
     }
+
     /**
-     * @description 创建包含指定mapper的Db工具类,使用本类的第一种用法
-     * @author liyang
-     * @date 2017/10/15-下午9:44
-     * @param
-     **/
+     * <p>
+     * 创建包含指定mapper的Db工具类,使用本类的第一种用法
+     *
+     * @param clazz mapper的类类型
+     * @date 2017年2月22日 下午10:09:31
+     */
     public static <T> Db<T> create(Class<T> clazz) {
         return new Db<T>(clazz);
     }
+
     /**
-     * @description 通过一个条件获取数据库中的一条记录(会返回null)
-     * @author liyang
-     * @date 2017/10/15-下午9:45
-     **/
+     * <p>
+     * 获取一个mapper的快捷方法
+     *
+     * @param clazz mapper类的类对象
+     * @date 2017年2月22日 下午10:31:35
+     */
+    public BaseMapper<?> getMapper() {
+        return this.baseMapper;
+    }
+
+    /**
+     * <p>
+     * 获取一个mapper的快捷方法
+     *
+     * @param clazz mapper类的类对象
+     * @date 2017年2月22日 下午10:31:35
+     */
+    public static <T> T getMapper(Class<T> clazz) {
+        return SpringContextHolder.getBean(clazz);
+    }
+
+    /**
+     * 通过一个条件获取数据库中的一条记录(会返回null)
+     *
+     * @date 2017年2月22日 下午10:45:51
+     */
     public <E> E selectOneByCon(String condition, Object value) {
         List<?> results = selectOneByConList(condition, value);
         if (results != null && results.size() > 0) {
@@ -65,11 +90,12 @@ public class Db<T> {
             return null;
         }
     }
+
     /**
-     * @description 通过一个条件获取一堆记录(会返回null)
-     * @author liyang
-     * @date 2017/10/15-下午9:49
-     **/
+     * 通过一个条件获取一堆记录(会返回null)
+     *
+     * @date 2017年2月22日 下午10:45:51
+     */
     public <E> List<E> selectOneByConList(String condition, Object value) {
         HashMap<String, Object> conditionMap = new HashMap<String, Object>();
         conditionMap.put(condition, value);
@@ -81,5 +107,4 @@ public class Db<T> {
             return results;
         }
     }
-
 }
